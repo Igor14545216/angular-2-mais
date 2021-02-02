@@ -8,5 +8,11 @@
         <p>Curso de Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}</p> 
     </article>
 
+    <article>
+        <h3>Propoerty Binding</h3>
+        <img src="{{ urlImagem }}">
+        <img [src]="urlImagem"> <!-- coloco o colchete para o angular entender que é um property binding -->
+    </article>
+
 
 </section>

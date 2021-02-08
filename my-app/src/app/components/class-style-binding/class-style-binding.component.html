@@ -1,0 +1,64 @@
+<section>
+    <article>
+        <h3>Component: class-style-binding</h3>
+        <div class="row">
+            <div class="col-md-12">
+                <p>Property binding usado de maneiros diferentes para manipulação do style css</p>
+            </div>
+        </div><br>
+        
+        <div class="row">
+            <div class="col-md-6 col-xs-12 form-group">
+                <label>selecione uma classe: </label>
+                <select #classe class="form-control" (change)="0">
+                    <option value="alert-primary">primary!</option>
+                    <option value="alert-secondary">secondary!</option>
+                    <option value="alert-success">success!</option>
+                    <option value="alert-danger">danger!</option>
+                    <option value="alert-warning">warning!</option>
+                    <option value="alert-info">info!</option>
+                    <option value="alert-light">light!</option>
+                    <option value="alert-dark">dark!</option>
+                </select>
+                <br><br>
+            </div>
+        </div>
+    
+
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <h4>Usando apenas uma div e aplicando a interpolação</h4>
+                <p>Ao invés de fazer várias div, foi feito uma interpolação com a variável classe do combo.</p>
+                <div class="alert {{ classe.value }}" role="alert">Texto preenchido com a class: {{ classe.value }}</div>
+            </div>
+        </div>
+        <br>
+
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <h4>Usando várias divs com condições</h4>
+                <p>Sempre que satisfazer a condição dentro do property binding [class.classCss]="condição", irá setar a class no css na div correspondente. </p>
+                <div class="alert" role="alert" [class.alert-primary]="classe.value == 'alert-primary'">Classe primary!</div>
+                <div class="alert" role="alert" [class.alert-secondary]="classe.value == 'alert-secondary'">Classe secondary!</div>
+                <div class="alert" role="alert" [class.alert-success]="classe.value == 'alert-success'">Classe success!</div>
+                <div class="alert" role="alert" [class.alert-danger]="classe.value == 'alert-danger'">Classe danger!</div>
+                <div class="alert" role="alert" [class.alert-warning]="classe.value == 'alert-warning'">Classe warning!</div>
+                <div class="alert" role="alert" [class.alert-info]="classe.value == 'alert-info'">Classe info!</div>
+                <div class="alert" role="alert" [class.alert-light]="classe.value == 'alert-light'">Classe light!</div>
+                <div class="alert" role="alert" [class.alert-dark]="classe.value == 'alert-dark'">Classe dark!</div>
+            </div>
+        </div>
+        <br><br>
+
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <h4>Usando style binding</h4>
+                <p>Property binding com estilo de classe. Podemos manipular uma classe qualquer condicionalmente com uma variável. Neste caso a variável de comparação foi a classe do combo. Neste exemplo, a condição se satisfaz quando classe == danger.</p>
+
+                <div class="alert alert-danger" role="alert"
+                    [style.display]="classe.value == 'alert-danger' ? 'block' : 'none'" >Classe anger!
+                </div>
+           </div>
+        </div>
+    </article>
+</section>

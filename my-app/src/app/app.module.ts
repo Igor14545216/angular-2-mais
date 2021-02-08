@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { MeuPrimeiroComponent } from './meu-primeiro/meu-primeiro.component';
 import { CursosModule } from './cursos/cursos.module';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
+import { ClassStyleBindingComponent } from './components/class-style-binding/class-style-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MeuPrimeiroComponent,
-    DataBindingComponent
+    DataBindingComponent,
+    ClassStyleBindingComponent
   ],
   imports: [
     BrowserModule,

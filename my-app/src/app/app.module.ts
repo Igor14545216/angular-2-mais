@@ -7,13 +7,15 @@ import { MeuPrimeiroComponent } from './meu-primeiro/meu-primeiro.component';
 import { CursosModule } from './cursos/cursos.module';
 import { DataBindingComponent } from './components/data-binding/data-binding.component';
 import { ClassStyleBindingComponent } from './components/class-style-binding/class-style-binding.component';
+import { EventBindingComponent } from './components/event-binding/event-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MeuPrimeiroComponent,
     DataBindingComponent,
-    ClassStyleBindingComponent
+    ClassStyleBindingComponent,
+    EventBindingComponent
   ],
   imports: [
     BrowserModule,

@@ -17,3 +17,7 @@ ng new nome-do-projeto
   
   criar diretiva
   ng g directive nome-da-diretiva
+  
+bootstrap sem jquery
+https://valor-software.com/ngx-bootstrap/#/documentation#getting-started  
+

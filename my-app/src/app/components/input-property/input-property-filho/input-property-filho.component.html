@@ -1,0 +1,19 @@
+<div class="row">
+    <div class="col-md-12 col-xs-12 form-group">
+        <h4>Exemplo 1</h4>
+        <p>No html pai: [nomeVariavelFilho1]="nomeVariavelPai". No typescript filho: @Input() nomeVariavelFilho1: string = '';</p>
+    </div>
+    <div class="col-md-6 col-xs-6 form-group">
+        {{ nomeVariavelFilho1 }}
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-12 col-xs-12 form-group">
+        <h4>Exemplo 2</h4>
+        <p>No html pai: [nome]="nomeVariavelPai". No typescript filho: @Input('nome') nomeVariavelFilho2: string = '';;</p>
+    </div>
+    <div class="col-md-6 col-xs-6 form-group">
+        {{ nomeVariavelFilho2 }}
+    </div>
+</div>

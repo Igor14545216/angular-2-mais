@@ -10,6 +10,8 @@ import { DataBindingComponent } from './components/data-binding/data-binding.com
 import { ClassStyleBindingComponent } from './components/class-style-binding/class-style-binding.component';
 import { EventBindingComponent } from './components/event-binding/event-binding.component';
 import { TwoWayDataBindingComponent } from './components/two-way-data-binding/two-way-data-binding.component';
+import { InputPropertyComponent } from './components/input-property/input-property.component';
+import { InputPropertyFilhoComponent } from './components/input-property/input-property-filho/input-property-filho.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { TwoWayDataBindingComponent } from './components/two-way-data-binding/tw
     DataBindingComponent,
     ClassStyleBindingComponent,
     EventBindingComponent,
-    TwoWayDataBindingComponent
+    TwoWayDataBindingComponent,
+    InputPropertyComponent,
+    InputPropertyFilhoComponent
   ],
   imports: [
     BrowserModule,

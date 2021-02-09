@@ -1,0 +1,21 @@
+
+<section>
+    <article>
+        <h3>#Input property</h3><br>
+
+        <h5>Component: <i>InputPropertyComponent</i> e <i>InputPropertyFilhoComponent</i></h5><br>
+        <div class="row">
+            <div class="col-md-12">
+                <p> O conceito é muito simples, você usará isso quando quiser receber dados de um component pai. Neste exemplo, o InputPropertyComponent será o arquivo pai e o InputPropertyFilhoComponent será o filho. </p>
+            </div>
+        </div>
+        <hr>
+
+    </article>
+</section>
+
+<app-input-property-filho 
+    [nomeVariavelFilho1]="nomeVariavelPai"
+    [nome]="nomeVariavelPai"
+></app-input-property-filho>
+

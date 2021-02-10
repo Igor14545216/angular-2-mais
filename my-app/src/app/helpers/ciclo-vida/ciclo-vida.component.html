@@ -1,0 +1,52 @@
+<section>
+    <article>
+        <h3>#Ciclo de vida do Componente</h3><br>
+        <h5>Component: <i>CicloVidaComponent</i> e <i>CicloVidaFilhoComponent</i></h5><br>
+        <div class="row">
+            <div class="col-md-12">
+                <p>Todo componente no angular tem um conjunto de eventos de ciclo de vida(lifecycle hooks) que ocorrem
+                    quando um componente é criado, renderizado, tem o valor de suas propriedades alteradas ou é
+                    destruído. o Angular invoca uma séries de métodos (hooks), que são executados no momento em que
+                    esses eventos são acionados</p>
+            </div>
+        </div>
+        <hr>
+        <!-- //TODO:comentar e fazer um exemplo de cada hooks -->
+        <!-- //Explicar cada um com texto -->
+        <!--Evento			-	quando-->
+        <!-- ngOnChanges  		-	antes #2 quando valor property-binding é atualizado -->
+        <!-- ngOnInit    		-	quando Component é inicializado -->
+        <!-- ngDoCheck   		-	a cada ciclo de verificação de mudanças -->
+        <!-- ngAfterContentlnit	-	depois de inserir conteúdo externo na view -->
+        <!-- ngAfterContentChecked	-	a cada verificação do conteúdo inserido -->
+        <!-- ngAfterViewChecked	-	a cada verificação de conteúdo / conteúdo filho -->
+        <!-- ngOnDestroy		-	antes da diretiva/component ser destruído -->
+        <!-- ngAfterViewInit -->
+
+
+        <h4>Exemplo 1</h4>
+        <p>Para fazer este teste, abra o console e atualize a página, veja que todos os lifecycle hooks foram chamados.
+            Exceto o ngOnDestroy. A seguir, limpe o console e clique no botão "Mudar valor" para encontrar somente os
+            hooks acionados no clique. </p>
+        <div class="row">
+            <div class="col-md-3">
+                <button class="btn btn-primary" (click)="mudarValor()">Mudar valor</button>
+            </div>
+            <div class="col-md-4">
+                <app-ciclo-vida-filho [valorInicial]="valor" *ngIf="!deletarCiclo"></app-ciclo-vida-filho>
+            </div>
+        </div>
+        <hr>
+        <h4>Exemplo de ngOnDestroy</h4>
+        <p>Para fazer este teste, limpe o console e clique no botão "Destruir ciclo" para encontrar somente os hooks
+            acionados no clique. Observe que o campo 'valor' do 'CicloVidaFilhoComponent' sumiu. Terminando o ciclo do
+            componente.</p>
+        <div class="row">
+            <div class="col-md-6">
+                <button class="btn btn-primary" (click)="desctruirCiclo()">Destruir ciclo</button>
+            </div>
+            <div class="col-md-6">
+            </div>
+        </div>
+    </article>
+</section>

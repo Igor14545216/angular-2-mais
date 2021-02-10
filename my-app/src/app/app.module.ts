@@ -13,6 +13,8 @@ import { InputPropertyComponent } from './helpers/input-property/input-property.
 import { InputPropertyFilhoComponent } from './helpers/input-property/input-property-filho/input-property-filho.component';
 import { OutputPropertyComponent } from './helpers/output-property/output-property.component';
 import { OutputPropertyFilhoComponent } from './helpers/output-property/output-property-filho/output-property-filho.component';
+import { CicloVidaComponent } from './helpers/ciclo-vida/ciclo-vida.component';
+import { CicloVidaFilhoComponent } from './helpers/ciclo-vida/ciclo-vida-filho/ciclo-vida-filho.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { OutputPropertyFilhoComponent } from './helpers/output-property/output-p
     InputPropertyFilhoComponent,
     OutputPropertyComponent,
     OutputPropertyFilhoComponent,
+    CicloVidaComponent,
+    CicloVidaFilhoComponent
   ],
   imports: [
     BrowserModule,

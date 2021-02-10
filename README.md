@@ -7,7 +7,7 @@ Run ng serve for a dev server. Navigate to http://localhost:4200/. The app will 
 ------------------------------------------------------------
 
 ## instalar o angular CLI
-npm install -g @angular/cli
+npm install -g @angular/cli ou a versão que eu quero Install. npm i @angular/cli@9.0.4
 
 ## Npm básicos do angular CLI
 criar um projeto: ng new nome-do-projeto.
@@ -27,6 +27,14 @@ npm install bootstrap -- save (última versão do bootstrap)
  ou
 npm install bootstrap@3.3.7 (bootstrap na versão 3)
 
+no arquivo angular.json adicionar:
+
+"scripts": [
+			"./node_modules/jquery/dist/jquery.js",
+            "./node_modules/popper.js/dist/umd/popper.js",
+            "./node_modules/bootstrap/dist/js/bootstrap.js"
+           ]
+
 ------------------------------------------------------------
 
 ## Sites
@@ -36,4 +44,7 @@ https://valor-software.com/ngx-bootstrap/#/documentation#getting-started
 
 #### Bootstrap
 https://getbootstrap.com/
+
+#### Eventos do javascript
+https://developer.mozilla.org/pt-BR/docs/Web/Events
 

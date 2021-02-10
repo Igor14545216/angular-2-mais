@@ -15,6 +15,7 @@ import { OutputPropertyComponent } from './helpers/output-property/output-proper
 import { OutputPropertyFilhoComponent } from './helpers/output-property/output-property-filho/output-property-filho.component';
 import { CicloVidaComponent } from './helpers/ciclo-vida/ciclo-vida.component';
 import { CicloVidaFilhoComponent } from './helpers/ciclo-vida/ciclo-vida-filho/ciclo-vida-filho.component';
+import { DecoratorViewchildComponent } from './helpers/decorator-viewchild/decorator-viewchild.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { CicloVidaFilhoComponent } from './helpers/ciclo-vida/ciclo-vida-filho/c
     OutputPropertyComponent,
     OutputPropertyFilhoComponent,
     CicloVidaComponent,
-    CicloVidaFilhoComponent
+    CicloVidaFilhoComponent,
+    DecoratorViewchildComponent
   ],
   imports: [
     BrowserModule,

@@ -4,21 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MeuPrimeiroComponent } from './meu-primeiro/meu-primeiro.component';
 import { CursosModule } from './cursos/cursos.module';
-import { DataBindingComponent } from './components/data-binding/data-binding.component';
-import { ClassStyleBindingComponent } from './components/class-style-binding/class-style-binding.component';
-import { EventBindingComponent } from './components/event-binding/event-binding.component';
-import { TwoWayDataBindingComponent } from './components/two-way-data-binding/two-way-data-binding.component';
-import { InputPropertyComponent } from './components/input-property/input-property.component';
-import { InputPropertyFilhoComponent } from './components/input-property/input-property-filho/input-property-filho.component';
-import { OutputPropertyComponent } from './components/output-property/output-property.component';
-import { OutputPropertyFilhoComponent } from './components/output-property/output-property-filho/output-property-filho.component';
+import { DataBindingComponent } from './helpers/data-binding/data-binding.component';
+import { ClassStyleBindingComponent } from './helpers/class-style-binding/class-style-binding.component';
+import { EventBindingComponent } from './helpers/event-binding/event-binding.component';
+import { TwoWayDataBindingComponent } from './helpers/two-way-data-binding/two-way-data-binding.component';
+import { InputPropertyComponent } from './helpers/input-property/input-property.component';
+import { InputPropertyFilhoComponent } from './helpers/input-property/input-property-filho/input-property-filho.component';
+import { OutputPropertyComponent } from './helpers/output-property/output-property.component';
+import { OutputPropertyFilhoComponent } from './helpers/output-property/output-property-filho/output-property-filho.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MeuPrimeiroComponent,
     DataBindingComponent,
     ClassStyleBindingComponent,
     EventBindingComponent,

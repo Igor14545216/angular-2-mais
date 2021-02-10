@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-12 col-xs-12 form-group">
+        <h4>Exemplo 1</h4>
+        <p>Aqui ocorre apenas o Input(). No html pai estou passando para o filho um property fixo com [valor]="10". No typescript filho estou recebendo esse parâmetro com @Input() valor: number = 0.</p>
+    </div>
+    <div class="col-md-6 col-xs-6 form-group">
+            <button class="btn btn-primary" (click)="decrementa()">-</button>
+            <input readonly type="text" [value]="valor">
+            <button class="btn btn-primary" (click)="incrementa()">+</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-md-12 col-xs-12 form-group">
+        <h4>Exemplo 2</h4>
+        <p>Usando o EventEmitter, consigo passar um valor do filho para o pai, por meio do property @Output(). Resultado no console.log colocado em OutputPropertyComponent. </p>
+    </div>
+    <div class="col-md-6 col-xs-6 form-group">
+            <button class="btn btn-primary" (click)="decrementaOutput()">-</button>
+            <input readonly type="text" [value]="valorOutput">
+            <button class="btn btn-primary" (click)="incrementaOutput()">+</button>
+    </div>
+</div>

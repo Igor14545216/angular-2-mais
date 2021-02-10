@@ -26,6 +26,7 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "strictTemplates": true, 
-    "strictDomEventTypes": false,
+    "strictDomEventTypes": false,          //pegar o value direto do html com event.target.value
+     "strictPropertyInitialization": false //não obriga a inicialização da minha variável
   }
 }

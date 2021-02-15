@@ -1,17 +1,10 @@
-<section>
-    <article>
-        <h3>#Ouput property</h3><br>
+<app-card-title 
+    [title]="'Output property'" 
+    [header]="'OutputPropertyComponent e OutputPropertyFilhoComponent'"
+    [text]="textoOutputProperty">
+</app-card-title>
 
-        <h5>Component: <i>OutputPropertyComponent</i> e <i>OutputPropertyFilhoComponent</i></h5><br>
-        <div class="row">
-            <div class="col-md-12">
-                <p> Property usado para passar conteúdo do filho para o pai. Desde parâmetros simples até objetos complexos. A ordem de emissão de eventos no angular é a seguinte: Pai emite para o filho: Input(). Filho emite para o pai: @Output(). </p>
-            </div>
-        </div>
-        <hr>
 
-        <app-output-property-filho 
-            [valor]="10" (mudouValor)="mudouValorPai($event)">
-        </app-output-property-filho>
-    </article>
-</section>
+<app-output-property-filho 
+    [valor]="10" (mudouValor)="mudouValorPai($event)">
+</app-output-property-filho>

@@ -1,23 +1,33 @@
-<div class="row">
-    <div class="col-md-12 col-xs-12 form-group">
-        <h4>Exemplo 1</h4>
-        <p>Aqui ocorre apenas o Input(). No html pai estou passando para o filho um property fixo com [valor]="10". No typescript filho estou recebendo esse parâmetro com @Input() valor: number = 0.</p>
-    </div>
-    <div class="col-md-6 col-xs-6 form-group">
+<app-card-group 
+    [exemplo]="1"
+    [text]="textoExemplo1" [class1]="'col-xs-12 col-md-6'" [class2]="'col-xs-12 col-md-12'"
+    [img1]="'assets/images/output-property/outputproperty1.png'" [textImg1]="'HTML pai'"
+    [img2]="'assets/images/output-property/outputproperty2.png'" [textImg2]="'Typescript filho'" 
+    [img3]="'assets/images/output-property/outputproperty3.png'" [textImg3]="'HTML filho'">
+    <br>
+    <div class="row">
+        <div class="col-md-6 col-xs-6 form-group">
             <button class="btn btn-primary" (click)="decrementa()">-</button>
             <input readonly type="text" [value]="valor">
             <button class="btn btn-primary" (click)="incrementa()">+</button>
+        </div>
     </div>
-</div>
-<hr>
-<div class="row">
-    <div class="col-md-12 col-xs-12 form-group">
-        <h4>Exemplo 2</h4>
-        <p>Usando o EventEmitter, consigo passar um valor do filho para o pai, por meio do property @Output(). Resultado no console.log colocado em OutputPropertyComponent. </p>
-    </div>
-    <div class="col-md-6 col-xs-6 form-group">
+</app-card-group>
+
+<app-card-group 
+    [exemplo]="2"
+    [text]="textoExemplo2" [class1]="'col-xs-12 col-md-6'" [class2]="'col-xs-12 col-md-6'"
+    [img1]="'assets/images/output-property/outputproperty4.png'" [textImg1]="'Typescript filho'"
+    [img2]="'assets/images/output-property/outputproperty5.png'" [textImg2]="'Typescript filho'" 
+    [img3]="'assets/images/output-property/outputproperty6.png'" [textImg3]="'Typescript pai'"
+    [img4]="'assets/images/output-property/outputproperty7.png'" [textImg4]="'HTML pai'"
+    >
+    <br>
+    <div class="row">
+        <div class="col-md-6 col-xs-6 form-group">
             <button class="btn btn-primary" (click)="decrementaOutput()">-</button>
             <input readonly type="text" [value]="valorOutput">
             <button class="btn btn-primary" (click)="incrementaOutput()">+</button>
+        </div>
     </div>
-</div>
+</app-card-group>

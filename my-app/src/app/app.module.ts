@@ -16,6 +16,9 @@ import { OutputPropertyFilhoComponent } from './helpers/output-property/output-p
 import { CicloVidaComponent } from './helpers/ciclo-vida/ciclo-vida.component';
 import { CicloVidaFilhoComponent } from './helpers/ciclo-vida/ciclo-vida-filho/ciclo-vida-filho.component';
 import { DecoratorViewchildComponent } from './helpers/decorator-viewchild/decorator-viewchild.component';
+import { RouterModule } from '@angular/router';
+import { HomeComponent } from './helpers/home/home.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -30,15 +33,19 @@ import { DecoratorViewchildComponent } from './helpers/decorator-viewchild/decor
     OutputPropertyFilhoComponent,
     CicloVidaComponent,
     CicloVidaFilhoComponent,
-    DecoratorViewchildComponent
+    DecoratorViewchildComponent,
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule, 
     CursosModule,
-    FormsModule
+    FormsModule, 
+    RouterModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent], 
+  exports:[RouterModule]
 })
 export class AppModule { }

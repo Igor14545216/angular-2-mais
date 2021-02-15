@@ -20,6 +20,7 @@ import { RouterModule } from '@angular/router';
 import { HomeComponent } from './helpers/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { CardTitleComponent } from './components/card-title/card-title.component';
+import { CardGroupComponent } from './components/card-group/card-group.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { CardTitleComponent } from './components/card-title/card-title.component
     DecoratorViewchildComponent,
     HomeComponent,
     NotFoundComponent,
-    CardTitleComponent
+    CardTitleComponent,
+    CardGroupComponent
   ],
   imports: [
     BrowserModule,

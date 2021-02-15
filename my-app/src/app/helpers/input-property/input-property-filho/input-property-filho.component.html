@@ -1,39 +1,14 @@
-<div class="card-group">
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">Exemplo</h5>
-            <p class="card-text">No typescript pai foi criado uma variável do tipo string "nomeVariavelPai" já
-                inicializada com um valor. No html pai essa variável foi passada por meio do input property no selector
-                do filho. No typescript filho foi criado uma variável usando o decorator de @Input com o mesmo nome
-                passado no selector do html pai. No HTML filho foi feito uma interpolação para exibir o resultado da
-                variável na tela.</p>
-        </div>
-        <div class="row p-2">
-            <div class="col-md-5 col-xs-5">
-                <img src="assets/images/inputpropert5.png" class="card-img-top" alt="teste">
-                <p class="card-text"><small class="text-muted">Typescript pai</small></p>
-            </div>
-            <div class="col-md-5 col-xs-5">
-                <img src="assets/images/inputpropert4.png" class="card-img-top" alt="teste">
-                <p class="card-text"><small class="text-muted">Html pai</small></p>
-            </div>
-        </div>
-        <div class="row p-2">
-            <div class="col-md-5 col-xs-5">
-                <img src="assets/images/inputpropert3.png" class="card-img-top" alt="teste">
-                <p class="card-text"><small class="text-muted">Typescript filho</small></p>
-            </div>
-            <div class="col-md-5 col-xs-5">
-                <img src="assets/images/inputpropert1.png" class="card-img-top" alt="teste">
-                <p class="card-text"><small class="text-muted">Html filho</small></p>
-            </div>
+<app-card-group
+    [text]="textoExemplo"
+    [img1]="'assets/images/inputpropert5.png'" [textImg1]="'Typescript pai'"
+    [img2]="'assets/images/inputpropert4.png'" [textImg2]="'HTML pai'"
+    [img3]="'assets/images/inputpropert3.png'" [textImg3]="'Typescript Filho'"
+    [img4]="'assets/images/inputpropert1.png'" [textImg4]="'HTML filho'">
+
+    <div class="row">
+        <div class="col-md-12 col-xs-12 form-group">
+            {{ nomeVariavelFilho2 }}
         </div>
     </div>
-</div>
-<hr>
-<div class="row">
-    <div class="col-md-12 col-xs-12 form-group">
-        <h4>Resultado:</h4>
-        {{ nomeVariavelFilho2 }}
-    </div>
-</div>
+</app-card-group>
+

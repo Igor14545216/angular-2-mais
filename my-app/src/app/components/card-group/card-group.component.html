@@ -4,7 +4,7 @@
             <h5 class="card-title">Exemplo {{ exemplo }}</h5>
             <p class="card-text"> {{ text }}</p>
         </div>
-        <div class="row p-2">
+        <div class="row p-2" *ngIf="img1">
             <div class="{{ class1 }}">
                 <img src="{{ img1 }}" class="card-img-top he">
                 <p class="card-text"><small class="text-muted">{{ textImg1 }}</small></p>
@@ -14,7 +14,7 @@
                 <p class="card-text"><small class="text-muted">{{ textImg2 }}</small></p>
             </div>
         </div>
-        <div class="row p-2">
+        <div class="row p-2" *ngIf="img3">
             <div class="{{ class2 }}">
                 <img src="{{ img3 }}" class="card-img-top he">
                 <p class="card-text"><small class="text-muted">{{ textImg3 }}</small></p>
@@ -24,12 +24,12 @@
                 <p class="card-text"><small class="text-muted">{{ textImg4 }}</small></p>
             </div>
         </div>
+        <div class="row p-2 ml-1">
+            <div class="card-body">
+                <h5 class="card-title">Resultado:</h5>
+                <ng-content></ng-content> 
+            </div>
+        </div>
     </div>
 </div>
 <hr>
-<div class="row">
-    <div class="col-md-12 col-xs-12 form-group">
-        <h4>Resultado:</h4>
-        <ng-content></ng-content> 
-    </div>
-</div>

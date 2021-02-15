@@ -1,83 +1,63 @@
-<section>
-    <article>
-        <h3>#Event binding</h3>
-        <div class="row">
-            <div class="col-md-12">
-                <p>Property binding usado de maneiras diferentes para manipulação do style css</p>
-            </div>
-        </div>
-        <hr>
+<app-card-title 
+    [title]="'Event binding'" 
+    [header]="'EventBindingComponent'"
+    [text]="textoOutputProperty">
+</app-card-title>
 
-        <div class="row">
-            <div class="col-md-12 col-xs-12 form-group">
-                <h4>Adicionar um evento de clique no botão</h4>
-                <p>Ao adicionar o evento '(click)' do angular, pode-se criar um método no typescript:</p>
-            </div>
-            <div class="col-md-6 col-xs-12 form-group">
-                <button (click)="botaoClicado()" class="btn btn-primary">Me clique!</button>
-            </div>
+<app-card-group 
+    [exemplo]="1"
+    [text]="textoEx1" [class1]="'col-xs-12 col-md-6'"
+    [img1]="'/assets/images/event-binding/eventbinding1.png'" [textImg1]="'No HTML'"
+    [img2]="'assets/images/event-binding/eventbinding2.png'" [textImg2]="'No Typescript'">
+    <br>
+    <div class="row">
+        <div class="col-md-6 col-xs-12 form-group">
+            <button (click)="botaoClicado()" class="btn btn-primary">Me clique!</button>
         </div>
-        <hr>
+    </div>
+</app-card-group>
 
-        <div class="row">
-            <div class="col-md-12 col-xs-12 form-group">
-                <h4>Exemplos de alguns eventos do javascript usados no angular</h4>
-                <p>Passando algum evento no html, posso capturá-lo no typscript e trazer o seu resutlado de volta por meio da interpolação:</p>
-            </div>
-            <div class="col-md-6 col-xs-6 form-group">
-                <label>Event com keyup</label>
-                <input type="text" class="form-control" type="text" (keyup)="onKeyUp($event)">
-            </div>
-            <div class="col-md-6 col-xs-6 form-group">
-                <label>Texto capturado do input</label>
-                <div class="form-control"> {{ textoDigitado }}</div>
-            </div>
+<app-card-group 
+    [exemplo]="2" [text]="textoEx2">
+    <br>
+    <div class="row">
+        <div class="col-md-6 col-xs-6 form-group">
+            <label>Event com keyup</label>
+            <input type="text" class="form-control" type="text" (keyup)="onKeyUp($event)">
         </div>
-
-        <div class="row">
-            <div class="col-md-6 col-xs-6 form-group">
-                <label>Event com keyup ao apertar enter</label>
-                <input type="text" class="form-control" type="text" (keyup.enter)="salvarKeyUpEnter($event)">
-            </div>
-            <div class="col-md-6 col-xs-6 form-group">
-                <label>Texto capturado do input</label>
-                <div class="form-control"> {{ keyupEnter }}</div>
-            </div>
+        <div class="col-md-6 col-xs-6 form-group">
+            <label>Texto capturado do input</label>
+            <div class="form-control"> {{ textoDigitado }}</div>
         </div>
-
-        <div class="row">
-            <div class="col-md-6 col-xs-6 form-group">
-                <label>Event com blur (quando o campo perde o foco)</label>
-                <input type="text" class="form-control" type="text" (blur)="salvarBlur($event)">
-            </div>
-            <div class="col-md-6 col-xs-6 form-group">
-                <label>Texto capturado do input</label>
-                <div class="form-control"> {{ blur }}</div>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-xs-6 form-group">
+            <label>Event com keyup ao apertar enter</label>
+            <input type="text" class="form-control" type="text" (keyup.enter)="salvarKeyUpEnter($event)">
         </div>
-
-        <div class="row">
-            <div class="col-md-6 col-xs-6 form-group">
-                <label>Event com keyup usando variável no html</label>
-                <input type="text" class="form-control" type="text" (keyup)="evento.value" #evento>
-            </div>
-            <div class="col-md-6 col-xs-6 form-group">
-                <label>Texto capturado do input</label>
-                <div class="form-control"> {{ evento.value }}</div>
-            </div>
+        <div class="col-md-6 col-xs-6 form-group">
+            <label>Texto capturado do input</label>
+            <div class="form-control"> {{ keyupEnter }}</div>
         </div>
-        <hr>
-
-        <div class="row">
-            <div class="col-md-12 col-xs-12 form-group">
-                <h4>Exemplo de mouseover e mouseout</h4>
-                <p>Neste exemplo também foi usado o binding de css</p>
-            </div>
-            <div class="col-md-6 col-xs-6 form-group">
-                <span (mouseover)="onMouseOverOut()" (mouseout)="onMouseOverOut()" [class.highlight]="mouseOver">
-                    Passe o mouse aqui 
-                </span>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-xs-6 form-group">
+            <label>Event com blur (quando o campo perde o foco)</label>
+            <input type="text" class="form-control" type="text" (blur)="salvarBlur($event)">
         </div>
-    </article>
-</section>
+        <div class="col-md-6 col-xs-6 form-group">
+            <label>Texto capturado do input</label>
+            <div class="form-control"> {{ blur }}</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-xs-6 form-group">
+            <label>Event com keyup usando variável no html</label>
+            <input type="text" class="form-control" type="text" (keyup)="evento.value" #evento>
+        </div>
+        <div class="col-md-6 col-xs-6 form-group">
+            <label>Texto capturado do input</label>
+            <div class="form-control"> {{ evento.value }}</div>
+        </div>
+    </div>
+</app-card-group>

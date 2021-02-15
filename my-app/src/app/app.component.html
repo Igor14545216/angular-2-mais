@@ -1,13 +1,4 @@
 <!-- <app-cursos></app-cursos> -->
-<!-- <app-data-binding></app-data-binding> -->
-<!-- <app-class-style-binding></app-class-style-binding> -->
-<!-- <app-event-binding></app-event-binding> -->
-<!-- <app-two-way-data-binding></app-two-way-data-binding> -->
-<!-- <app-input-property></app-input-property> -->
-<!-- <app-output-property></app-output-property> -->
-<!-- <app-ciclo-vida></app-ciclo-vida> -->
-<!-- <app-decorator-viewchild></app-decorator-viewchild> -->
-
 
 <nav class="navbar fixed-top navbar-expand-md navbar-dark bg-primary mb-3">
     <div class="flex-row d-flex">
@@ -50,6 +41,12 @@
                     <ul class="list-unstyled flex-column pl-3 collapse" id="submenu1" aria-expanded="false">
                         <li class="nav-item font-submenu"><a class="nav-link" [routerLink]="['/data-binding']">Data binding</a></li>
                         <li class="nav-item font-submenu"><a class="nav-link" [routerLink]="['/input-property']">Input property</a></li>
+                        <li class="nav-item font-submenu"><a class="nav-link" [routerLink]="['/output-property']">Output property</a></li>
+                        <li class="nav-item font-submenu"><a class="nav-link" [routerLink]="['/viewchild']">Viewchild</a></li>
+                        <li class="nav-item font-submenu"><a class="nav-link" [routerLink]="['/event-binding']">Event binding</a></li>
+                        <li class="nav-item font-submenu"><a class="nav-link" [routerLink]="['/style-binding']">Class style binding</a></li>
+                        <li class="nav-item font-submenu"><a class="nav-link" [routerLink]="['/two-way-data-binding']">Two way data binding</a></li>
+                        <li class="nav-item font-submenu"><a class="nav-link" [routerLink]="['/page-not-found']">Ciclo de vida do componente</a></li>
                     </ul>
                 </li>
                 <li class="nav-item"><a class="nav-link" [routerLink]="['/page-not-found']"
@@ -70,13 +67,11 @@
         </div>
         <!--/col-->
 
-        <!--Content-->
         <div class="col main pt-5 mt-3">
             <router-outlet></router-outlet>
         </div>
-        <!--/main col-->
     </div>
-
+    
 </div>
 <!--/.container-->
 <footer class="container-fluid bg-light py-2">
@@ -98,15 +93,15 @@
                 <p>This is a dashboard layout for Bootstrap 4. This is an example of the Modal component which you can
                     use to show content.
                     Any content can be placed inside the modal and it can use the Bootstrap grid classes.</p>
-                <p>
-                    <a href="https://www.codeply.com/go/KrUO8QpyXP" target="_ext">Grab the code at Codeply</a>
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary-outline" data-dismiss="modal">OK</button>
+                    <p>
+                        <a href="https://www.codeply.com/go/KrUO8QpyXP" target="_ext">Grab the code at Codeply</a>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary-outline" data-dismiss="modal">OK</button>
+                </div>
             </div>
         </div>
-    </div>
-</div> -->
-<!-- <router-outlet></router-outlet> -->
+    </div> -->
+    <!-- <router-outlet></router-outlet> -->

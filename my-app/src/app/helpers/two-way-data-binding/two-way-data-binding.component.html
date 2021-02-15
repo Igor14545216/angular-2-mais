@@ -1,67 +1,62 @@
-<section>
-    <article>
-        <h3>#Two way data binding</h3>
-        <div class="row">
-            <div class="col-md-12">
-                <p>O Two way data binding basicamente é: o que acontece no DOM(View), reflete no typescript, e o que
-                    acontece no typescript(Model), reflete no DOM(View).</p>
-            </div>
+<app-card-title 
+    [title]="'Two way data binding'" 
+    [header]="'TwoWayDataBindingComponent'"
+    [text]="textoTwoWayDataBinding">
+</app-card-title>
+
+<app-card-group 
+    [exemplo]="1" [text]="textoExemplo1">
+    <div class="row">
+        <div class="col-md-6 col-xs-6 form-group">
+            <label>Usando [value] e (input)</label>
+            <input type="text" class="form-control" type="text" [value]="nome" (input)="nome = $event.target.value">
         </div>
-        <hr>
-        <div class="row">
-            <div class="col-md-12 col-xs-12 form-group">
-                <h4>Exemplos na prática:</h4>
-            </div>
-            <div class="col-md-6 col-xs-6 form-group">
-                <label>Usando [value] e (input)</label>
-                <input type="text" class="form-control" type="text" [value]="nome" (input)="nome = $event.target.value">
-            </div>
-            <div class="col-md-6 col-xs-6 form-group">
-                <label>Digite aqui</label>
-                <input type="text" class="form-control" type="text" [value]="nome" (input)="nome = $event.target.value">
-            </div>
+        <div class="col-md-6 col-xs-6 form-group">
+            <label>Digite aqui</label>
+            <input type="text" class="form-control" type="text" [value]="nome" (input)="nome = $event.target.value">
         </div>
-        <div class="row">
-            <div class="col-md-6 col-xs-6 form-group">
-                <label>Usando [ngModel] e (ngModelChange)</label>
-                <input type="text" class="form-control" type="text" [ngModel]="nome2" (ngModelChange)="nome2 = $event">
-            </div>
-            <div class="col-md-6 col-xs-6 form-group">
-                <label>Digite aqui</label>
-                <input type="text" class="form-control" type="text" [ngModel]="nome2" (ngModelChange)="nome2 = $event">
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-xs-6 form-group">
+            <label>Usando [ngModel] e (ngModelChange)</label>
+            <input type="text" class="form-control" type="text" [ngModel]="nome2" (ngModelChange)="nome2 = $event">
         </div>
-        <div class="row">
-            <div class="col-md-6 col-xs-6 form-group">
-                <label>Usando [(ngModel)] - O mais certo para se usar no Angular</label>
-                <input type="text" class="form-control" type="text" [(ngModel)]="nome3">
-            </div>
-            <div class="col-md-6 col-xs-6 form-group">
-                <label>Digite aqui</label>
-                <input type="text" class="form-control" type="text" [(ngModel)]="nome3">
-            </div>
+        <div class="col-md-6 col-xs-6 form-group">
+            <label>Digite aqui</label>
+            <input type="text" class="form-control" type="text" [ngModel]="nome2" (ngModelChange)="nome2 = $event">
         </div>
-        <hr>
-        <h4>Exemplo com objeto</h4>
-        <div class="row">
-            <div class="col-md-12">
-                <p>Pode ser usado também com objetos complexos. No exemplo a seguir foi usado o [(ngModel)]="pessoa.nome" e [(ngModel)]="pessoa.idade"</p>
-            </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-xs-6 form-group">
+            <label>Usando [(ngModel)] - O mais certo para se usar no Angular</label>
+            <input type="text" class="form-control" type="text" [(ngModel)]="nome3">
         </div>
-        <div class="row">
-            <div class="col-md-12 col-xs-12 form-group">
-                <label style="color: blue">Meu nome é {{ pessoa.nome }} e minha idade é {{ pessoa.idade }}</label>
-            </div>
+        <div class="col-md-6 col-xs-6 form-group">
+            <label>Digite aqui</label>
+            <input type="text" class="form-control" type="text" [(ngModel)]="nome3">
         </div>
-        <div class="row">
-            <div class="col-md-6 col-xs-6 form-group">
-                <label>Nome</label>
-                <input type="text" class="form-control" type="text" [(ngModel)]="pessoa.nome">
-            </div>
-            <div class="col-md-6 col-xs-6 form-group">
-                <label>Idade</label>
-                <input type="text" class="form-control" type="text" [(ngModel)]="pessoa.idade">
-            </div>
+    </div>
+</app-card-group>
+
+
+<app-card-group 
+    [exemplo]="2" [text]="textoExemplo2" [class1]="'col-xs-12 col-md-6'"
+    [img1]="'assets/images/two-way-data-binding/twowaydatabinding1.png'" [textImg1]="'No HTML'"
+    [img2]="'assets/images/two-way-data-binding/twowaydatabinding2.png'" [textImg2]="'No Typescript'">
+    <div class="row">
+        <div class="col-md-12 col-xs-12 form-group">
+            <label style="color: blue">Meu nome é {{ pessoa.nome }} e minha idade é {{ pessoa.idade }}</label>
         </div>
-    </article>
-</section>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-xs-6 form-group">
+            <label>Nome</label>
+            <input type="text" class="form-control" type="text" [(ngModel)]="pessoa.nome">
+        </div>
+        <div class="col-md-6 col-xs-6 form-group">
+            <label>Idade</label>
+            <input type="text" class="form-control" type="text" [(ngModel)]="pessoa.idade">
+        </div>
+    </div>
+    
+</app-card-group>

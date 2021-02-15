@@ -14,6 +14,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventBindingComponent implements OnInit {
 
+  textoOutputProperty: string = 'Eventos do Javascript usados no Angular.Os bindings em angular são as formas de como a View interage com Model/(Compoment).';
+  textoEx1: string = 'Ao adicionar o evento `(click)` do angular, pode-se criar um método no typescript:';
+  textoEx2: string = 'Passando algum evento no html, posso capturá-lo no typscript e trazer o seu resutlado de volta por meio da interpolação. Resultados também exibidos no console.';
   textoDigitado: string = '';
   keyupEnter: string = '';
   blur: string = '';

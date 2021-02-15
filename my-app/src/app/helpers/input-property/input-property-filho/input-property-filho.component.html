@@ -1,19 +1,42 @@
-<div class="row">
-    <div class="col-md-12 col-xs-12 form-group">
-        <h4>Exemplo 1</h4>
-        <p>No html pai: [nomeVariavelFilho1]="nomeVariavelPai". No typescript filho: @Input() nomeVariavelFilho1: string = '';</p>
-    </div>
-    <div class="col-md-6 col-xs-6 form-group">
-        {{ nomeVariavelFilho1 }}
+<div class="card-group">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Exemplo</h5>
+            <p class="card-text">No typescript pai foi criado uma variável do tipo string "nomeVariavelPai" já
+                inicializada com um valor. No html pai essa variável foi passada por meio do input property no selector
+                do filho. No typescript filho foi criado uma variável usando o decorator de @Input com o mesmo nome
+                passado no selector do html pai. No HTML filho foi feito uma interpolação para exibir o resultado da
+                variável na tela.</p>
+        </div>
+        <div class="row p-2">
+            <div class="col-md-5 col-xs-5">
+                <img src="assets/images/inputpropert5.png" class="card-img-top" alt="teste">
+                <p class="card-text"><small class="text-muted">Typescript pai</small></p>
+            </div>
+            <div class="col-md-5 col-xs-5">
+                <img src="assets/images/inputpropert4.png" class="card-img-top" alt="teste">
+                <p class="card-text"><small class="text-muted">Html pai</small></p>
+            </div>
+        </div>
+        <div class="row p-2">
+            <div class="col-md-5 col-xs-5">
+                <img src="assets/images/inputpropert3.png" class="card-img-top" alt="teste">
+                <p class="card-text"><small class="text-muted">Typescript filho</small></p>
+            </div>
+            <div class="col-md-5 col-xs-5">
+                <img src="assets/images/inputpropert1.png" class="card-img-top" alt="teste">
+                <p class="card-text"><small class="text-muted">Html filho</small></p>
+            </div>
+        </div>
     </div>
 </div>
 <hr>
 <div class="row">
     <div class="col-md-12 col-xs-12 form-group">
-        <h4>Exemplo 2</h4>
-        <p>No html pai: [nome]="nomeVariavelPai". No typescript filho: @Input('nome') nomeVariavelFilho2: string = '';;</p>
-    </div>
-    <div class="col-md-6 col-xs-6 form-group">
+        <h4>Resultado:</h4>
+        <!-- <p>No html pai: [nome]="nomeVariavelPai". No typescript filho: @Input('nome') nomeVariavelFilho2: string = '';
+        </p> -->
+
         {{ nomeVariavelFilho2 }}
     </div>
 </div>

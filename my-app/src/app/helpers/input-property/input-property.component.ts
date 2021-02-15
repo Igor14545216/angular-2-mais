@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InputPropertyComponent implements OnInit {
 
-  nomeVariavelPai: string = 'Variável do tipo string passada do componente InputPropertyComponent para o InputPropertyFilhoComponent usando o decorator @Input()';
+  nomeVariavelPai: string = 'Variável do tipo string passada do componente InputPropertyComponent para o InputPropertyFilhoComponent usando o decorator @Input().';
 
   constructor() { }
 

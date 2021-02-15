@@ -1,42 +1,37 @@
-<section>
-    <article>
-        <h3>#Acesso ao DOM e ao Template com ViewChild</h3><br>
-        <h5>Component: <i>DecoratorViewchildComponent</i></h5><br>
-        <div class="row">
-            <div class="col-md-12">
-                <p>O ViewChild torna possível acessar um componente filho e chamar métodos ou acessar variáveis de
-                    instância que estão disponíveis para o filho, além de acessar um elemento DOM com variável local no
-                    HTML. Os dois exemplos a seguir é de acesso ao DOM.</p>
-            </div>
+<app-card-title 
+    [title]="'ViewChild'" 
+    [header]="'DecoratorViewchildComponent'"
+    [text]="textoViewchild">
+</app-card-title>
+
+<app-card-group
+    [exemplo]="1" [text]="textoExemplo1" 
+    [class1]="'col-xs-12 col-md-6'" [class2]="'col-xs-12 col-md-6'"
+    [img1]="'assets/images/viewchild/viewchild1.png'" [textImg1]="'Variável #campoInput criada no HTML'"
+    [img2]="'assets/images/viewchild/viewchild2.png'" [textImg2]="'Variável campoInput criada no typescript'">
+
+    <div class="row">
+        <div class="col-md-6 col-xs-6 form-group">
+            <button class="btn btn-primary" (click)="decrementa()">-</button>
+            <input readonly type="text" [value]="valorEx1" #campoInput>
+            <button class="btn btn-primary" (click)="incrementa()">+</button>
         </div>
-        <hr>
-        <div class="row">
-            <div class="col-md-12 col-xs-12 form-group">
-                <h4>Exemplo 1</h4>
-                <p> Depois de ter criado a variável local no html com '#campoInput', no typescript foi criado um
-                    decorator @ViewChild com a variável 'campoValorInput', e a mesma foi tipada com HTMLElement, podemos
-                    ver todos os eventos que um campo input pode disparar, além do value, etc. Para testar clique em um dos
-                    dois botões e veja no console o resultado:
-                </p>
-            </div>
-            <div class="col-md-6 col-xs-6 form-group">
-                <button class="btn btn-primary" (click)="decrementa()">-</button>
-                <input readonly type="text" [value]="valorEx1" #campoInput>
-                <button class="btn btn-primary" (click)="incrementa()">+</button>
-            </div>
+    </div>
+</app-card-group>
+
+<app-card-group
+    [exemplo]="2" [text]="textoExemplo2" 
+    [class1]="'col-xs-12 col-md-6'" [class2]="'col-xs-12 col-md-12'"
+    [img1]="'assets/images/viewchild/viewchild3.png'" [textImg1]="'Variável #campoInput criada no HTML'"
+    [img2]="'assets/images/viewchild/viewchild4.png'" [textImg2]="'Variável campoInput criada no typescript'"
+    [img3]="'assets/images/viewchild/viewchild5.png'" [textImg3]="'Métodos para exibir o valor no console'">
+
+    <div class="row">
+        <div class="col-md-6 col-xs-6 form-group">
+            <button class="btn btn-primary" (click)="_decrementa()">-</button>
+            <input readonly type="text" [value]="valorEx2" #campoInput2>
+            <button class="btn btn-primary" (click)="_incrementa()">+</button>
         </div>
-        <hr>
-        <div class="row">
-            <div class="col-md-12 col-xs-12 form-group">
-                <h4>Exemplo 2</h4>
-                <p> Após a tipagem da variável de 'HTMLElement' para 'ElementRef' para fazer o uso de uma interface, podemos manipular a variável de acordo com sua necessidade. Neste exemplo, mostrei apenas o valor da variável 'campoInput2' com 'this.campoValorInput2.nativeElement.value'. Veja o resultado no console:
-                </p>
-            </div>
-            <div class="col-md-6 col-xs-6 form-group">
-                <button class="btn btn-primary" (click)="_decrementa()">-</button>
-                <input readonly type="text" [value]="valorEx2" #campoInput2>
-                <button class="btn btn-primary" (click)="_incrementa()">+</button>
-            </div>
-        </div>
-    </article>
-</section>
+    </div>
+</app-card-group>
+

@@ -19,6 +19,7 @@ import { DecoratorViewchildComponent } from './helpers/decorator-viewchild/decor
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './helpers/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { CardTitleComponent } from './components/card-title/card-title.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     CicloVidaFilhoComponent,
     DecoratorViewchildComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    CardTitleComponent
   ],
   imports: [
     BrowserModule,

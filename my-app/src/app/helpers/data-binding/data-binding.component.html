@@ -1,18 +1,26 @@
-<section class="property-binding">
+<app-card-title 
+  [title]="'Interpolação e Property binding'" 
+  [header]="'DataBindingComponent'"
+  [text]="textoInterpolacao">
+</app-card-title>
 
-    <article>
-        <h3> Interpolação</h3>
-        <p>String renderizada com interpoçaão: {{ url }}</p>
-        <p>O resultado de 1 + 1 é: {{ 1 + 1 }}</p>
-        <p>O resultado de 1 + 1 não é {{ 1 + 1 + getValor()}}</p> 
-        <p>Curso de Angular e gosto do curso: {{ cursoAngular && getCurtirCurso() }}</p> 
-    </article>
+<app-card-group 
+  [img1]="'assets/images/interpolacao1.png'" [textImg1]="'Typescript'"
+  [img2]="'assets/images/interpolacao2.png'" [textImg2]="'HTML'">
 
-    <article>
-        <h3>Propoerty Binding</h3>
-        <img src="{{ urlImagem }}">
-        <img [src]="urlImagem"> <!-- coloco o colchete para o angular entender que é um property binding -->
-    </article>
+  <article>
+    <ul>
+      <li>String renderizada com interpolação: <a href="{{ url }}">{{ url }}.</a></li>
+      <li>O resultado de 1 + 1 é: {{ 1 + 1 }}.</li>
+      <li>O resultado de 1 + 1 não é {{ 1 + 1 + getValor() }}.</li>
+      <li>Curso de Angular e curso legal: {{ cursoAngular && getCurtirCurso() }}.</li>
+    </ul>
+  </article>
 
 
-</section>
+  <div class="row">
+    <img class="p-1" src="{{ urlImagem }}" alt="Imagem aleatória da internet">
+    <img class="p-1" [src]="urlImagem" alt="Imagem aleatória da internet">
+  </div>
+
+</app-card-group>

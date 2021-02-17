@@ -13,7 +13,6 @@ import { TwoWayDataBindingComponent } from './helpers/two-way-data-binding/two-w
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'page-not-found', component: NotFoundComponent },
   { path: 'data-binding', component: DataBindingComponent },
   { path: 'input-property', component: InputPropertyComponent },
   { path: 'output-property', component: OutputPropertyComponent },

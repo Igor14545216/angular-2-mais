@@ -21,6 +21,7 @@ const routes: Routes = [
   { path: 'event-binding', component: EventBindingComponent },
   { path: 'style-binding', component: ClassStyleBindingComponent },
   { path: 'two-way-data-binding', component: TwoWayDataBindingComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({

@@ -21,6 +21,10 @@ import { HomeComponent } from './helpers/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { CardTitleComponent } from './components/card-title/card-title.component';
 import { CardGroupComponent } from './components/card-group/card-group.component';
+import { DiretivasComponent } from './helpers/diretivas/diretivas.component';
+import { NgIfComponent } from './helpers/diretivas/ng-if/ng-if.component';
+import { NgForComponent } from './helpers/diretivas/ng-for/ng-for.component';
+import { NgSwitchComponent } from './helpers/diretivas/ng-switch/ng-switch.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +43,11 @@ import { CardGroupComponent } from './components/card-group/card-group.component
     HomeComponent,
     NotFoundComponent,
     CardTitleComponent,
-    CardGroupComponent
+    CardGroupComponent,
+    DiretivasComponent,
+    NgIfComponent,
+    NgForComponent,
+    NgSwitchComponent
   ],
   imports: [
     BrowserModule,

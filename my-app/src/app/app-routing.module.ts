@@ -5,6 +5,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ClassStyleBindingComponent } from './helpers/class-style-binding/class-style-binding.component';
 import { DataBindingComponent } from './helpers/data-binding/data-binding.component';
 import { DecoratorViewchildComponent } from './helpers/decorator-viewchild/decorator-viewchild.component';
+import { DiretivasComponent } from './helpers/diretivas/diretivas.component';
 import { EventBindingComponent } from './helpers/event-binding/event-binding.component';
 import { HomeComponent } from './helpers/home/home.component';
 import { InputPropertyComponent } from './helpers/input-property/input-property.component';
@@ -20,14 +21,15 @@ const routes: Routes = [
   { path: 'event-binding', component: EventBindingComponent },
   { path: 'style-binding', component: ClassStyleBindingComponent },
   { path: 'two-way-data-binding', component: TwoWayDataBindingComponent },
+  { path: 'diretivas', component: DiretivasComponent },
   { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, { 
-    useHash: true, 
+  imports: [RouterModule.forRoot(routes, {
+    useHash: true,
     scrollPositionRestoration: 'enabled',
-   })],
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

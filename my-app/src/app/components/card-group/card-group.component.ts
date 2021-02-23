@@ -5,6 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './card-group.component.html',
 })
 export class CardGroupComponent implements OnInit {
+  @Input() header: string = '';
   @Input() text: string = '';
   @Input() img1?: string = '';
   @Input() textImg1?: string = '';
@@ -16,7 +17,6 @@ export class CardGroupComponent implements OnInit {
   @Input() textImg4?: string = '';
   @Input() class1: string = '';
   @Input() class2?: string = '';
-  @Input() exemplo?: number;
 
   constructor() { }
 

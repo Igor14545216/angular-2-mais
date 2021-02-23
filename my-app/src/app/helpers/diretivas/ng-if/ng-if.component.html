@@ -1,6 +1,34 @@
-<app-card-group 
-    [header]="'Exemplo *ngIf'" [text]="textoNgIf">
+<app-card-group [header]="'Exemplo *ngIf'" [text]="textoNgIf"
+    [class1]="'col-md-6'" [class2]="'col-md-6'"
+    [img1]="'assets/images/diretivas/if/ngif2.png'" [textImg1]="'Variável declarada no Typescript'"
+    [img2]="'assets/images/diretivas/if/ngif4.png'" [textImg2]="'Variável declarada no Typescript'"
+    [img3]="'assets/images/diretivas/if/ngif1.png'" [textImg3]="'HTML'"
+    [img4]="'assets/images/diretivas/if/ngif3.png'" [textImg4]="'HTML'">
     <article>
-        <!-- aqui vem o html -->
+        <div class="row" *ngIf="arrayExemplo1.length > 0">
+            <div class="col-md-12">
+                Exibido se variável "arrayExemplo1" for maior que zero.
+            </div>
+        </div>
+        <div class="row" *ngIf="arrayExemplo1?.length == 0">
+            <div class="col-md-12">
+                Exibido se variável "arrayExemplo1" for igual a zero.
+            </div>
+        </div>
+        <div class="row" *ngIf="arrayExemplo2.length > 0">
+            <div class="col-md-12">
+                Exibido se variável "arrayExemplo2" for maior que zero.
+            </div>
+        </div>
+        <div class="row" *ngIf="arrayExemplo2.length == 0">
+            <div class="col-md-12">
+                Exibido se variável "arrayExemplo2" for igual a zero.
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 mt-3">
+                <button class="btn btn-primary" (click)="mudarValor()">Mudar valor</button>
+            </div>
+        </div>
     </article>
 </app-card-group>
